@@ -11,6 +11,8 @@ COPY src ./src
 COPY config ./config
 COPY templates ./templates
 COPY deploy ./deploy
+# Bake static files into the image: platforms without a shared static volume (Railway) serve them from here.
+RUN DJANGO_DEBUG=1 python manage.py collectstatic --noinput
 RUN useradd --create-home --uid 10001 digest \
     && mkdir -p /app/var /app/staticfiles /run/secrets/telethon /backups /erasure-guard \
     && chown -R digest:digest /app /run/secrets/telethon /backups /erasure-guard \
