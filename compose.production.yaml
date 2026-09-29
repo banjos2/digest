@@ -5,8 +5,12 @@ x-app-base: &app-base
     context: .
     dockerfile: Dockerfile
   image: ai-digest:${APP_IMAGE_TAG:-local}
+  # .env.production on a manual Debian install, .env when Dokploy writes the variables.
   env_file:
-    - .env.production
+    - path: .env.production
+      required: false
+    - path: .env
+      required: false
   init: true
   restart: unless-stopped
   read_only: true
@@ -103,7 +107,8 @@ services:
         - CMD
         - python
         - -c
-        - "import urllib.request; request=urllib.request.Request('http://127.0.0.1:8000/health/', headers={'X-Forwarded-Proto':'https'}); urllib.request.urlopen(request, timeout=5)"
+        # Django answers 400 to hosts outside DJANGO_ALLOWED_HOSTS, so send the first allowed one.
+        - "import os, urllib.request; host=os.environ['DJANGO_ALLOWED_HOSTS'].split(',')[0].strip(); request=urllib.request.Request('http://127.0.0.1:8000/health/', headers={'Host':host, 'X-Forwarded-Proto':'https'}); urllib.request.urlopen(request, timeout=5)"
       interval: 30s
       timeout: 10s
       retries: 3

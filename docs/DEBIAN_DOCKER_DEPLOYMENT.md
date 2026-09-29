@@ -153,10 +153,11 @@ docker compose --env-file .env.production -f compose.production.yaml logs --tail
 Проверка локального reverse proxy на сервере:
 
 ```bash
-curl -fsS -H 'X-Forwarded-Proto: https' http://127.0.0.1:8080/health/
+curl -fsS -H 'Host: digest.company.example' -H 'X-Forwarded-Proto: https' http://127.0.0.1:8080/health/
 ```
 
-Ожидаемый ответ: `{"status":"ok","scope":"web_and_database"}`.
+Вместо `digest.company.example` укажите домен из `DJANGO_ALLOWED_HOSTS`. Ожидаемый ответ:
+`{"status":"ok","scope":"web_and_database"}`.
 
 ## 9. Подключить корпоративный HTTPS
 

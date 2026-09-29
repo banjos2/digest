@@ -16,6 +16,7 @@
 [WORKING_ACCOUNTS_AND_INFRA_GUIDE.md](<C:/Users/Vladislavv/Documents/ChatGPT/AI-дайджесты бот/docs/WORKING_ACCOUNTS_AND_INFRA_GUIDE.md>).
 Готовый production-контур Docker для Debian и порядок передачи разработчику описаны в
 [DEBIAN_DOCKER_DEPLOYMENT.md](<C:/Users/Vladislavv/Documents/ChatGPT/AI-дайджесты бот/docs/DEBIAN_DOCKER_DEPLOYMENT.md>).
+Развёртывание в Dokploy описано в [DOKPLOY_DEPLOYMENT.md](docs/DOKPLOY_DEPLOYMENT.md).
 Развёртывание на Railway описано в [RAILWAY_DEPLOYMENT.md](docs/RAILWAY_DEPLOYMENT.md).
 
 ## Открыть текущую версию
