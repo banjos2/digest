@@ -7,7 +7,7 @@ Code). Секреты в файл не пишутся: он ссылается �
 
 - `Postgres` — PostgreSQL 17, как в compose и CI; `pg_dump` в образе приложения тоже 17.
 - `rabbitmq` — RabbitMQ 4 с томом `rabbitmq-data`.
-- `web` — Gunicorn и админка, публичный HTTPS-домен, healthcheck `/health/`. Перед каждым деплоем
+- `digest` — Gunicorn и админка, публичный HTTPS-домен, healthcheck `/health/`. Перед каждым деплоем
   выполняется `deploy/init.sh`: миграции, начальный каталог, роли, `check --deploy`.
 - `worker` — Celery worker, scheduler, приём и отправка Telegram в одном контейнере
   (`deploy/railway-worker.sh`) с томом `worker-data` в `/data`. Railway подключает том только к одному
@@ -43,37 +43,31 @@ Code). Секреты в файл не пишутся: он ссылается �
    | `TELEGRAM_SOURCE_API_ID`, `TELEGRAM_SOURCE_API_HASH`, `TELEGRAM_SOURCE_PHONE` | Telethon; без сбора из Telegram оставьте пустыми |
    | `BACKUP_AGE_RECIPIENT` | публичный ключ из `age-keygen`; приватный ключ храните вне Railway |
 
-3. Создайте сервисы, тома и переменные, затем домен для `web`:
+3. Создайте сервисы, тома и переменные, затем домен для `digest`. Оба сервиса приложения собираются
+   из GitHub-репозитория `banjos2/digest` (ветка `main`); у Railway должен быть доступ к нему через
+   GitHub App.
 
    ```bash
    railway config plan
    railway config apply
-   railway domain --service web
+   railway domain --service digest
    ```
 
-4. Загрузите код в оба сервиса приложения:
-
-   ```bash
-   railway up --service web
-   railway up --service worker
-   ```
-
-5. Создайте администратора и, если нужен сбор из Telegram, авторизуйте Telethon-сессию (код придёт в
+4. Создайте администратора и, если нужен сбор из Telegram, авторизуйте Telethon-сессию (код придёт в
    Telegram, сессия сохранится на томе worker):
 
    ```bash
-   railway ssh --service web python manage.py createsuperuser
+   railway ssh --service digest python manage.py createsuperuser
    railway ssh --service worker python manage.py init_telethon_session
    ```
 
-6. Проверьте `https://<домен>/health/` — ответ `{"status": "ok", ...}` — и логи:
+5. Проверьте `https://<домен>/health/` — ответ `{"status": "ok", ...}` — и логи:
    `railway logs --service worker`.
 
 ## Обновление
 
-Повторите `railway up --service web` и `railway up --service worker`. Изменения инфраструктуры —
-правка `.railway/railway.ts`, затем `railway config plan` и `railway config apply`. После подключения
-репозитория GitHub (`railway service source connect`) деплой будет идти автоматически.
+Пуш в `main` деплоит `digest` и `worker` автоматически. Изменения инфраструктуры — правка
+`.railway/railway.ts`, затем `railway config plan` и `railway config apply`.
 
 ## Ограничения
 
@@ -82,4 +76,4 @@ Code). Секреты в файл не пишутся: он ссылается �
 - Резервные копии и erasure guard лежат на томе worker внутри того же проекта Railway. Это не внешнее
   хранилище: регулярно копируйте `/data/backups` за пределы Railway.
 - Если подключаете свой домен, добавьте его в `DJANGO_ALLOWED_HOSTS` и `DJANGO_CSRF_TRUSTED_ORIGINS`
-  сервиса `web` в `.railway/railway.ts`.
+  сервиса `digest` в `.railway/railway.ts`.

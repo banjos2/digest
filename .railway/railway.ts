@@ -1,6 +1,6 @@
 // Railway project for the digest service. Runbook: docs/RAILWAY_DEPLOYMENT.md.
 // Secrets are Railway shared variables (ctx.shared.*); they are never written here.
-import { database, defineRailway, image, project, service, volume } from "railway/iac";
+import { database, defineRailway, github, image, project, service, volume } from "railway/iac";
 
 export default defineRailway((ctx) => {
   // Postgres 17 matches compose, CI and the pg_dump in the app image (Debian postgresql-client 17).
@@ -44,14 +44,19 @@ export default defineRailway((ctx) => {
     BACKUP_AGE_RECIPIENT: ctx.shared.BACKUP_AGE_RECIPIENT,
   };
 
-  const web = service("web", {
+  const repo = github("banjos2/digest", { branch: "main" });
+
+  // "digest" is the public web service; its generated domain targets port 8000.
+  const web = service("digest", {
+    source: repo,
     build: { builder: "DOCKERFILE" },
-    // gunicorn binds 0.0.0.0:$PORT when PORT is set, as Railway does.
+    // gunicorn binds 0.0.0.0:$PORT.
     start: "gunicorn digest_service.wsgi:application --workers 2 --timeout 90 --access-logfile - --error-logfile -",
     preDeploy: "sh deploy/init.sh",
     healthcheck: "/health/",
     env: {
       ...app,
+      PORT: "8000",
       DJANGO_ALLOWED_HOSTS: "${{RAILWAY_PUBLIC_DOMAIN}},healthcheck.railway.app",
       DJANGO_CSRF_TRUSTED_ORIGINS: "https://${{RAILWAY_PUBLIC_DOMAIN}}",
       DJANGO_TRUST_PROXY: "1",
@@ -60,6 +65,7 @@ export default defineRailway((ctx) => {
 
   const workerData = volume("worker-data");
   const worker = service("worker", {
+    source: repo,
     build: { builder: "DOCKERFILE" },
     start: "bash deploy/railway-worker.sh",
     volumeMounts: { "/data": workerData },
