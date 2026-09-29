@@ -10,7 +10,7 @@ export default defineRailway((ctx) => {
     defaultMountPath: "/var/lib/postgresql/data",
   });
 
-  const brokerData = volume("rabbitmq-data");
+  const brokerData = volume("rabbitmq-data", { region: "iad", sizeMB: 500 });
   const broker = service("rabbitmq", {
     source: image("rabbitmq:4-management"),
     volumeMounts: { "/var/lib/rabbitmq": brokerData },
@@ -44,12 +44,12 @@ export default defineRailway((ctx) => {
     BACKUP_AGE_RECIPIENT: ctx.shared.BACKUP_AGE_RECIPIENT,
   };
 
+  // Both app services build the root Dockerfile, which Railway picks up automatically.
   const repo = github("banjos2/digest", { branch: "main" });
 
   // "digest" is the public web service; its generated domain targets port 8000.
   const web = service("digest", {
     source: repo,
-    build: { builder: "DOCKERFILE" },
     // gunicorn binds 0.0.0.0:$PORT.
     start: "gunicorn digest_service.wsgi:application --workers 2 --timeout 90 --access-logfile - --error-logfile -",
     preDeploy: "sh deploy/init.sh",
@@ -63,10 +63,9 @@ export default defineRailway((ctx) => {
     },
   });
 
-  const workerData = volume("worker-data");
+  const workerData = volume("worker-data", { region: "iad", sizeMB: 500 });
   const worker = service("worker", {
     source: repo,
-    build: { builder: "DOCKERFILE" },
     start: "bash deploy/railway-worker.sh",
     volumeMounts: { "/data": workerData },
     // Time for SIGTERM to release process leases; longer jobs are retried after their lease expires.
