@@ -1,0 +1,857 @@
+{
+  "schema_version": "0.2",
+  "status": "editorial_proposal_for_future_pilot",
+  "source_catalog_as_of": "2026-09-09",
+  "data_retention_policy_ref": "config/data_retention_policy.json",
+  "selection_status": "proposed_by_assistant",
+  "collection_groups": [
+    {
+      "collection_id": "main",
+      "wave": "A",
+      "source_ids": [
+        "bbcrussian_telegram",
+        "meduza_telegram",
+        "kommersant_website",
+        "thebell_telegram",
+        "bbcnews_website",
+        "guardian_website"
+      ],
+      "fallback_candidate_ids": [
+        "agentstvo_telegram"
+      ],
+      "selection_reason": "Общая повестка, новости на RU/EN, совпадения сюжетов и цепочки первоисточников."
+    },
+    {
+      "collection_id": "economy",
+      "wave": "A",
+      "source_ids": [
+        "thebell_telegram",
+        "kommersant_website",
+        "rbc_website",
+        "cbr_telegram"
+      ],
+      "fallback_candidate_ids": [
+        "rbc_telegram"
+      ],
+      "selection_reason": "Редакционные новости и первичные решения регулятора. Заявления и прогнозы сохраняют атрибуцию."
+    },
+    {
+      "collection_id": "opinions",
+      "wave": "B",
+      "source_ids": [
+        "carnegie_telegram",
+        "conversation_website"
+      ],
+      "fallback_candidate_ids": [
+        "carnegie_en_telegram"
+      ],
+      "selection_reason": "Авторская аналитика на RU/EN; отличаем мнение и объяснение от установленного факта."
+    },
+    {
+      "collection_id": "war",
+      "wave": "B",
+      "source_ids": [
+        "bbcrussian_telegram",
+        "mediazona_telegram",
+        "cit_telegram",
+        "icrc_website"
+      ],
+      "fallback_candidate_ids": [
+        "isw_website",
+        "novayaeurope_telegram"
+      ],
+      "selection_reason": "Новости, аналитические оценки и гуманитарные сообщения. Различаем происхождение и статус утверждений."
+    },
+    {
+      "collection_id": "incidents",
+      "wave": "B",
+      "source_ids": [
+        "meduza_telegram",
+        "kommersant_website",
+        "mchs_telegram",
+        "fontanka_telegram"
+      ],
+      "fallback_candidate_ids": [
+        "agentstvo_telegram",
+        "interfax_telegram"
+      ],
+      "selection_reason": "Оперативные и региональные сообщения; сверяем числа и не превращаем обвинения в доказанные действия."
+    },
+    {
+      "collection_id": "sport",
+      "wave": "B",
+      "source_ids": [
+        "sports_telegram",
+        "bbcsport_website"
+      ],
+      "fallback_candidate_ids": [
+        "espn_website",
+        "championat_telegram"
+      ],
+      "selection_reason": "Русская и международная спортивная повестка. Первый проход без HTML-страницы авторизации Чемпионата."
+    },
+    {
+      "collection_id": "cinema",
+      "wave": "B",
+      "source_ids": [
+        "kinopoisk_telegram",
+        "variety_website"
+      ],
+      "fallback_candidate_ids": [
+        "deadline_website",
+        "filmru_telegram"
+      ],
+      "selection_reason": "Кино на RU/EN, релизы и индустрия. У Кинопоиска выбран Telegram, а не страница SSO."
+    },
+    {
+      "collection_id": "games",
+      "wave": "B",
+      "source_ids": [
+        "stopgame_website",
+        "eurogamer_website"
+      ],
+      "fallback_candidate_ids": [
+        "gamesindustry_website",
+        "dtf_telegram"
+      ],
+      "selection_reason": "Две тематические RSS. Eurogamer заменил недоступный при повторной живой проверке GamesIndustry; пользовательские посты DTF остаются резервом."
+    },
+    {
+      "collection_id": "technology",
+      "wave": "A",
+      "source_ids": [
+        "habr_website",
+        "verge_website",
+        "ars_website"
+      ],
+      "fallback_candidate_ids": [
+        "rozetked_telegram"
+      ],
+      "selection_reason": "Технологии на RU/EN и пересечение с AI. Корпоративные публикации Habr требуют отдельной маркировки."
+    },
+    {
+      "collection_id": "ai",
+      "wave": "A",
+      "source_ids": [
+        "openai_website",
+        "anthropic_website",
+        "deepmind_website",
+        "huggingface_website",
+        "mistral_website",
+        "techcrunch_website",
+        "gonzoml_telegram",
+        "ainewz_telegram",
+        "habr_website"
+      ],
+      "fallback_candidate_ids": [
+        "nplusone_website",
+        "arxiv_website"
+      ],
+      "selection_reason": "Пять первичных площадок разработчиков и сообщества, отраслевая редакция и русскоязычные разборы. Результаты производителя не приравниваются к независимому тесту."
+    }
+  ],
+  "primary_sources": [
+    {
+      "source_id": "ainewz_telegram",
+      "profile_id": "ainewz",
+      "name": "Эйай ньюз",
+      "url": "https://t.me/ai_newz",
+      "input_language": "ru",
+      "origin_group_id": "ainewz",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:22:00+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "anthropic_website",
+      "profile_id": "anthropic",
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news",
+      "input_language": "en",
+      "origin_group_id": "anthropic",
+      "technical_status": "page_metadata_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:59+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "ars_website",
+      "profile_id": "ars",
+      "name": "Ars Technica",
+      "url": "https://arstechnica.com/",
+      "input_language": "en",
+      "origin_group_id": "ars",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://feeds.arstechnica.com/arstechnica/index",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:58+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "bbcnews_website",
+      "profile_id": "bbcnews",
+      "name": "BBC News",
+      "url": "https://www.bbc.com/news",
+      "input_language": "en",
+      "origin_group_id": "bbc",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:54+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "bbcrussian_telegram",
+      "profile_id": "bbcrussian",
+      "name": "BBC News Русская служба",
+      "url": "https://t.me/bbcrussian",
+      "input_language": "ru",
+      "origin_group_id": "bbc",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:54+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "bbcsport_website",
+      "profile_id": "bbcsport",
+      "name": "BBC Sport",
+      "url": "https://www.bbc.com/sport",
+      "input_language": "en",
+      "origin_group_id": "bbc",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://feeds.bbci.co.uk/sport/rss.xml",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:56+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "carnegie_telegram",
+      "profile_id": "carnegie",
+      "name": "Carnegie Politika",
+      "url": "https://t.me/carnegiepolitika",
+      "input_language": "ru",
+      "origin_group_id": "carnegie",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:55+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "cbr_telegram",
+      "profile_id": "cbr",
+      "name": "Банк России",
+      "url": "https://t.me/centralbank_russia",
+      "input_language": "ru",
+      "origin_group_id": "cbr",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:55+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "cit_telegram",
+      "profile_id": "cit",
+      "name": "Conflict Intelligence Team",
+      "url": "https://t.me/CITeam",
+      "input_language": "ru",
+      "origin_group_id": "cit",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:55+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "conversation_website",
+      "profile_id": "conversation",
+      "name": "The Conversation",
+      "url": "https://theconversation.com/global",
+      "input_language": "en",
+      "origin_group_id": "conversation",
+      "technical_status": "page_metadata_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:55+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "deepmind_website",
+      "profile_id": "deepmind",
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/",
+      "input_language": "en",
+      "origin_group_id": "google",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://deepmind.google/blog/rss.xml",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:59+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "fontanka_telegram",
+      "profile_id": "fontanka",
+      "name": "Фонтанка",
+      "url": "https://t.me/fontankaspb",
+      "input_language": "ru",
+      "origin_group_id": "fontanka",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:55+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "eurogamer_website",
+      "profile_id": "eurogamer",
+      "name": "Eurogamer",
+      "url": "https://www.eurogamer.net/",
+      "input_language": "en",
+      "origin_group_id": "eurogamer",
+      "technical_status": "live_feed_probe_success",
+      "feed_url": "https://www.eurogamer.net/feed",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-11T15:19:00+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "feed_probe_only",
+      "is_active": false
+    },
+    {
+      "source_id": "gonzoml_telegram",
+      "profile_id": "gonzoml",
+      "name": "gonzo обзоры ML статей",
+      "url": "https://t.me/gonzo_ML",
+      "input_language": "ru",
+      "origin_group_id": "gonzoml",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:22:00+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "guardian_website",
+      "profile_id": "guardian",
+      "name": "The Guardian",
+      "url": "https://www.theguardian.com/international",
+      "input_language": "en",
+      "origin_group_id": "guardian",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://www.theguardian.com/world/rss",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:54+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "habr_website",
+      "profile_id": "habr",
+      "name": "Хабр",
+      "url": "https://habr.com/ru/news/",
+      "input_language": "ru",
+      "origin_group_id": "habr",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://habr.com/ru/rss/news/?fl=ru",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:58+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "huggingface_website",
+      "profile_id": "huggingface",
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog",
+      "input_language": "en",
+      "origin_group_id": "huggingface",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://huggingface.co/blog/feed.xml",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:59+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "icrc_website",
+      "profile_id": "icrc",
+      "name": "International Committee of the Red Cross",
+      "url": "https://www.icrc.org/en",
+      "input_language": "en",
+      "origin_group_id": "icrc",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://www.icrc.org/en/rss/general",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:55+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "kinopoisk_telegram",
+      "profile_id": "kinopoisk",
+      "name": "Кинопоиск",
+      "url": "https://t.me/kinopoisk",
+      "input_language": "ru",
+      "origin_group_id": "kinopoisk",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:56+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "kommersant_website",
+      "profile_id": "kommersant",
+      "name": "Коммерсантъ",
+      "url": "https://www.kommersant.ru/",
+      "input_language": "ru",
+      "origin_group_id": "kommersant",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://www.kommersant.ru/RSS/news.xml",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:54+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "mchs_telegram",
+      "profile_id": "mchs",
+      "name": "МЧС России",
+      "url": "https://t.me/mchs_official",
+      "input_language": "ru",
+      "origin_group_id": "mchs",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:55+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "mediazona_telegram",
+      "profile_id": "mediazona",
+      "name": "Медиазона",
+      "url": "https://t.me/mediazzzona",
+      "input_language": "ru",
+      "origin_group_id": "mediazona",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:55+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "meduza_telegram",
+      "profile_id": "meduza",
+      "name": "Медуза",
+      "url": "https://t.me/meduzalive",
+      "input_language": "ru",
+      "origin_group_id": "meduza",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:54+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "mistral_website",
+      "profile_id": "mistral",
+      "name": "Mistral AI News",
+      "url": "https://mistral.ai/news",
+      "input_language": "en",
+      "origin_group_id": "mistral",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://mistral.ai/news/rss",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:59+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "openai_website",
+      "profile_id": "openai",
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/",
+      "input_language": "en",
+      "origin_group_id": "openai",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://openai.com/news/rss.xml",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:59+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "rbc_website",
+      "profile_id": "rbc",
+      "name": "РБК",
+      "url": "https://www.rbc.ru/",
+      "input_language": "ru",
+      "origin_group_id": "rbc",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://rssexport.rbc.ru/rbcnews/news/30/full.rss",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:54+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "sports_telegram",
+      "profile_id": "sports",
+      "name": "Sports",
+      "url": "https://t.me/sportsru",
+      "input_language": "ru",
+      "origin_group_id": "sports",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:55+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "stopgame_website",
+      "profile_id": "stopgame",
+      "name": "StopGame",
+      "url": "https://stopgame.ru/",
+      "input_language": "ru",
+      "origin_group_id": "stopgame",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://stopgame.ru/rss/rss_news.xml",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:57+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "techcrunch_website",
+      "profile_id": "techcrunch",
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/",
+      "input_language": "en",
+      "origin_group_id": "techcrunch",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://techcrunch.com/feed/",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:59+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "thebell_telegram",
+      "profile_id": "thebell",
+      "name": "The Bell",
+      "url": "https://t.me/thebell_io",
+      "input_language": "ru",
+      "origin_group_id": "thebell",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:54+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "variety_website",
+      "profile_id": "variety",
+      "name": "Variety",
+      "url": "https://variety.com/",
+      "input_language": "en",
+      "origin_group_id": "variety",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://variety.com/feed/",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:56+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "verge_website",
+      "profile_id": "verge",
+      "name": "The Verge",
+      "url": "https://www.theverge.com/tech",
+      "input_language": "en",
+      "origin_group_id": "verge",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://www.theverge.com/rss/tech/index.xml",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:58+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    }
+  ],
+  "duplicate_origin_validation_pairs": [
+    {
+      "primary_source_id": "bbcrussian_telegram",
+      "secondary_source_id": "bbcrussian_website"
+    },
+    {
+      "primary_source_id": "meduza_telegram",
+      "secondary_source_id": "meduza_website"
+    },
+    {
+      "primary_source_id": "rbc_website",
+      "secondary_source_id": "rbc_telegram"
+    },
+    {
+      "primary_source_id": "habr_website",
+      "secondary_source_id": "habr_telegram"
+    }
+  ],
+  "secondary_validation_sources": [
+    {
+      "source_id": "bbcrussian_website",
+      "profile_id": "bbcrussian",
+      "name": "BBC News Русская служба",
+      "url": "https://www.bbc.com/russian",
+      "input_language": "ru",
+      "origin_group_id": "bbc",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://feeds.bbci.co.uk/russian/rss.xml",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:54+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "habr_telegram",
+      "profile_id": "habr",
+      "name": "Хабр",
+      "url": "https://t.me/habr_com",
+      "input_language": "ru",
+      "origin_group_id": "habr",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:58+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "meduza_website",
+      "profile_id": "meduza",
+      "name": "Медуза",
+      "url": "https://meduza.io/",
+      "input_language": "ru",
+      "origin_group_id": "meduza",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://meduza.io/rss/all",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:54+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "rbc_telegram",
+      "profile_id": "rbc",
+      "name": "РБК",
+      "url": "https://t.me/rbc_news",
+      "input_language": "ru",
+      "origin_group_id": "rbc",
+      "technical_status": "channel_profile_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:21:54+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    }
+  ],
+  "language_validation_sources": [
+    {
+      "source_id": "dwde_website",
+      "profile_id": "dwde",
+      "name": "DW Deutsch",
+      "url": "https://www.dw.com/de/",
+      "input_language": "de",
+      "origin_group_id": "dw",
+      "technical_status": "page_metadata_checked",
+      "feed_url": null,
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:24:28+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    },
+    {
+      "source_id": "lemonde_website",
+      "profile_id": "lemonde",
+      "name": "Le Monde",
+      "url": "https://www.lemonde.fr/",
+      "input_language": "fr",
+      "origin_group_id": "lemonde",
+      "technical_status": "feed_sample_parsed",
+      "feed_url": "https://www.lemonde.fr/rss/une.xml",
+      "retention_policy_id": "news_default_v1",
+      "last_page_check": "2026-09-08T23:24:28+00:00",
+      "source_access_review": "pending",
+      "full_content_test": "not_performed",
+      "regular_collection_test": "not_performed",
+      "is_active": false
+    }
+  ],
+  "youtube_policy_ref": "docs/YOUTUBE_SCOPE.md",
+  "youtube_release_target": "later_version",
+  "youtube_deferral": "confirmed_by_user",
+  "rollout_waves": [
+    {
+      "id": "A",
+      "collection_ids": [
+        "main",
+        "economy",
+        "technology",
+        "ai"
+      ],
+      "purpose": "Первое подключение общих новостей, экономики, технологий и AI"
+    },
+    {
+      "id": "B",
+      "collection_ids": [
+        "opinions",
+        "war",
+        "incidents",
+        "sport",
+        "cinema",
+        "games"
+      ],
+      "purpose": "Покрытие остальных шести текстовых подборок до завершения текстового пилота"
+    }
+  ],
+  "activation_requires": [
+    "source_specific_access_route_review",
+    "three_full_material_samples_checked",
+    "title_date_language_and_origin_verified",
+    "relevance_filter_checked",
+    "collection_health_visible"
+  ],
+  "replacement_policy": "Explicit replacement by source ID with the same editorial purpose after equivalent checks; no silent substitution.",
+  "proposed_evaluation": {
+    "materials_per_primary_source_min": 3,
+    "manual_story_review_count_min": 20,
+    "labelled_duplicate_pairs_min": 50,
+    "critical_factual_or_translation_errors_allowed": 0,
+    "digest_links_traceable_percent": 100,
+    "extraction_success_target_percent": 95,
+    "deduplication_precision_target_percent": 95,
+    "deduplication_recall_target_percent": 90,
+    "future_observation_days": 14
+  },
+  "measured_results": null,
+  "summary": {
+    "primary_profiles": 32,
+    "primary_sources": 32,
+    "primary_kinds": {
+      "telegram": 13,
+      "website": 19
+    },
+    "primary_languages": {
+      "ru": 17,
+      "en": 15
+    },
+    "primary_technical_statuses": {
+      "channel_profile_checked": 13,
+      "page_metadata_checked": 2,
+      "feed_sample_parsed": 17
+    },
+    "paired_secondary_sources": 4,
+    "extra_language_sources": 2,
+    "total_planned_check_endpoints": 38,
+    "text_collections": 10,
+    "waves": {
+      "A": 19,
+      "B": 16
+    }
+  }
+}

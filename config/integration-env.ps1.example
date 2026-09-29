@@ -1,0 +1,21 @@
+# Copy this file to ..\var\integration-env.ps1 and fill the copy.
+# var/ is excluded from Git. Never commit or send the filled file.
+$projectRoot = Split-Path -Parent $PSScriptRoot
+
+$env:TELEGRAM_SOURCE_API_ID = ""
+$env:TELEGRAM_SOURCE_API_HASH = ""
+$env:TELEGRAM_SOURCE_PHONE = ""
+$env:TELEGRAM_SOURCE_SESSION_PATH = Join-Path $projectRoot "var\telethon\source"
+$env:TELEGRAM_SOURCE_EDIT_LOOKBACK = "20"
+
+$env:OPENROUTER_API_KEY = ""
+$env:OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+$env:OPENROUTER_APP_TITLE = "Owned AI Digest"
+$env:AI_RU_MODEL = "openai/gpt-5.4"
+$env:AI_EN_MODEL = "openai/gpt-5-mini"
+$env:AI_MONTHLY_BUDGET_USD = "5.00"
+
+# Bot API token comes from @BotFather. Generate the webhook secret locally.
+# The secret is required by settings even when the first local test uses polling.
+$env:TELEGRAM_BOT_TOKEN = ""
+$env:TELEGRAM_WEBHOOK_SECRET = ""

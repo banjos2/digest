@@ -1,0 +1,805 @@
+{
+  "id": "user_reference_08_09_evening",
+  "provenance": "user_message",
+  "received_on": "2026-09-09",
+  "verification_status": "not_fact_checked",
+  "reference_purpose": "format_and_translation",
+  "source_language": "ru",
+  "translation_language": "en",
+  "collection_id": "main",
+  "display_date": "08.09",
+  "period_year": null,
+  "display_time_start": "15:03",
+  "display_time_end": "20:00",
+  "display_timezone": null,
+  "ru_revision": 1,
+  "en_translated_from_ru_revision": 1,
+  "items": [
+    {
+      "id": "main_01",
+      "section": "main",
+      "position": 1,
+      "title": {
+        "ru": "Путин и Трамп поговорили по телефону впервые с июля",
+        "en": "Putin and Trump hold their first phone call since July"
+      },
+      "summary": {
+        "ru": "Президенты обсудили итоги визита Уиткоффа и Кушнера в Москву и Киев. Трамп настаивал на скорейшем прекращении войны ради восстановления торгово-экономических связей с Россией, Путин изложил свою оценку фронта и заверил, что агрессивных планов против Европы у Москвы нет. Конкретных договорённостей о прекращении огня объявлено не было, продолжатся только обмены пленными.",
+        "en": "The two presidents discussed Witkoff and Kushner’s visits to Moscow and Kyiv. Trump pressed for a swift end to the war to help restore trade and economic ties with Russia. Putin gave his assessment of the fighting and insisted Moscow had no aggressive intentions towards Europe. No concrete ceasefire agreement was announced; prisoner exchanges are the only step set to continue."
+      },
+      "references": [
+        {
+          "handle": "bbcrussian",
+          "message_id": 99127,
+          "url": "https://t.me/bbcrussian/99127",
+          "name": {
+            "ru": "BBC News | Русская служба",
+            "en": "BBC News Russian"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "moscowtimes_ru",
+          "message_id": 49457,
+          "url": "https://t.me/moscowtimes_ru/49457",
+          "name": {
+            "ru": "The Moscow Times",
+            "en": "The Moscow Times"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "agentstvonews",
+          "message_id": 17173,
+          "url": "https://t.me/agentstvonews/17173",
+          "name": {
+            "ru": "Агентство. Новости",
+            "en": "Agentstvo"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "news_sirena",
+          "message_id": 45021,
+          "url": "https://t.me/news_sirena/45021",
+          "name": {
+            "ru": "Сирена",
+            "en": "Sirena"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "thebell_io",
+          "message_id": 39003,
+          "url": "https://t.me/thebell_io/39003",
+          "name": {
+            "ru": "The Bell",
+            "en": "The Bell"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "ostorozhno_novosti",
+          "message_id": 54611,
+          "url": "https://t.me/ostorozhno_novosti/54611",
+          "name": {
+            "ru": "Осторожно, новости",
+            "en": "Ostorozhno, Novosti"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "main_02",
+      "section": "main",
+      "position": 2,
+      "title": {
+        "ru": "Возобновление ударов по Киеву: погибшие, удар по телеканалу",
+        "en": "Russian strikes resume on Kyiv, killing five and hitting a TV station"
+      },
+      "summary": {
+        "ru": "После трёхдневной паузы Россия нанесла массированный удар по Киеву — погибли пять человек, пострадали до 29. Дрон попал в здание телеканала «Мы — Украина» во время прямого эфира, пострадали пять сотрудников. Зеленский назвал это «новой страницей российской деградации».",
+        "en": "Russia launched a major attack on Kyiv after a three-day pause, killing five people and injuring up to 29. A drone hit the building housing the My — Ukraina TV channel during a live broadcast, injuring five staff members. Zelensky called it “a new chapter in Russia’s degradation.”"
+      },
+      "references": [
+        {
+          "handle": "bbcrussian",
+          "message_id": 99128,
+          "url": "https://t.me/bbcrussian/99128",
+          "name": {
+            "ru": "BBC News | Русская служба",
+            "en": "BBC News Russian"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "mediazzzona",
+          "message_id": 33365,
+          "url": "https://t.me/mediazzzona/33365",
+          "name": {
+            "ru": "Медиазона",
+            "en": "Mediazona"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "smirusnews",
+          "message_id": 91012,
+          "url": "https://t.me/smirusnews/91012",
+          "name": {
+            "ru": "RusNews ⭕️",
+            "en": "RusNews"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "vottaktv",
+          "message_id": 81166,
+          "url": "https://t.me/vottaktv/81166",
+          "name": {
+            "ru": "Вот Так",
+            "en": "Vot Tak"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "tvrain",
+          "message_id": 110517,
+          "url": "https://t.me/tvrain/110517",
+          "name": {
+            "ru": "Дождь | Новости",
+            "en": "TV Rain"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "astrapress",
+          "message_id": 124627,
+          "url": "https://t.me/astrapress/124627",
+          "name": {
+            "ru": "ASTRA",
+            "en": "ASTRA"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "main_03",
+      "section": "main",
+      "position": 3,
+      "title": {
+        "ru": "Лавина в Кабардино-Балкарии убила бойцов «Витязя»",
+        "en": "Avalanche in Kabardino-Balkaria kills members of the Vityaz unit"
+      },
+      "summary": {
+        "ru": "Сход лавины в Безенгийском ущелье накрыл группу из 33 альпинистов во время учебных сборов силовиков. Погибли 12 или 13 человек, по данным разных источников, большинство — военнослужащие Центра специального назначения «Витязь» Росгвардии, включая инструктора Альберта Изотова. Официально Росгвардия принадлежность погибших к спецназу не подтверждает.",
+        "en": "An avalanche in the Bezengi Gorge hit a group of 33 climbers taking part in a security forces training exercise. Reports put the death toll at 12 or 13. Most of those killed were members of the Russian National Guard’s Vityaz special forces unit, including instructor Albert Izotov, according to the reports. The National Guard has not officially confirmed that those killed belonged to the unit."
+      },
+      "references": [
+        {
+          "handle": "kommersant",
+          "message_id": 114801,
+          "url": "https://t.me/kommersant/114801",
+          "name": {
+            "ru": "Коммерсантъ",
+            "en": "Kommersant"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "news_sirena",
+          "message_id": 45022,
+          "url": "https://t.me/news_sirena/45022",
+          "name": {
+            "ru": "Сирена",
+            "en": "Sirena"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "smirusnews",
+          "message_id": 91014,
+          "url": "https://t.me/smirusnews/91014",
+          "name": {
+            "ru": "RusNews ⭕️",
+            "en": "RusNews"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "kontext_channel",
+          "message_id": 77705,
+          "url": "https://t.me/kontext_channel/77705",
+          "name": {
+            "ru": "КОНТЕКСТ",
+            "en": "Kontekst"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "vottaktv",
+          "message_id": 81165,
+          "url": "https://t.me/vottaktv/81165",
+          "name": {
+            "ru": "Вот Так",
+            "en": "Vot Tak"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "bbcrussian",
+          "message_id": 99125,
+          "url": "https://t.me/bbcrussian/99125",
+          "name": {
+            "ru": "BBC News | Русская служба",
+            "en": "BBC News Russian"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "main_04",
+      "section": "main",
+      "position": 4,
+      "title": {
+        "ru": "14 лет колонии за фото могил российских военных",
+        "en": "Man sentenced to 14 years over photos of Russian soldiers’ graves"
+      },
+      "summary": {
+        "ru": "Ярославский областной суд приговорил 48-летнего Николая Щербакова к 14 годам строгого режима за государственную измену — он с 2024 года фотографировал могилы военных на мемориальном кладбище и передавал снимки украинским спецслужбам. Это первый известный в России приговор по такому обвинению; ранее по схожим делам задерживали жителей Томской области и Екатеринбурга.",
+        "en": "The Yaroslavl Regional Court sentenced Nikolai Shcherbakov, 48, to 14 years in a high-security penal colony for treason. The conviction concerned photographs of soldiers’ graves at a memorial cemetery, taken from 2024 onwards and passed to Ukrainian intelligence services. It is the first known Russian conviction in a case of this kind; people in the Tomsk region and Yekaterinburg had previously been detained in similar cases."
+      },
+      "references": [
+        {
+          "handle": "kontext_channel",
+          "message_id": 77707,
+          "url": "https://t.me/kontext_channel/77707",
+          "name": {
+            "ru": "КОНТЕКСТ",
+            "en": "Kontekst"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "sotavisionmedia",
+          "message_id": 63989,
+          "url": "https://t.me/sotavisionmedia/63989",
+          "name": {
+            "ru": "SOTAvision",
+            "en": "SOTAvision"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "varlamov_news",
+          "message_id": 74235,
+          "url": "https://t.me/varlamov_news/74235",
+          "name": {
+            "ru": "Varlamov News",
+            "en": "Varlamov News"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "tvrain",
+          "message_id": 110520,
+          "url": "https://t.me/tvrain/110520",
+          "name": {
+            "ru": "Дождь | Новости",
+            "en": "TV Rain"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "ostorozhno_novosti",
+          "message_id": 54612,
+          "url": "https://t.me/ostorozhno_novosti/54612",
+          "name": {
+            "ru": "Осторожно, новости",
+            "en": "Ostorozhno, Novosti"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "horizontal_russia",
+          "message_id": 57595,
+          "url": "https://t.me/horizontal_russia/57595",
+          "name": {
+            "ru": "7х7. Горизонтальная Россия",
+            "en": "7x7 — Horizontal Russia"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "main_05",
+      "section": "main",
+      "position": 5,
+      "title": {
+        "ru": "Румыния заявила о предотвращении российской диверсии",
+        "en": "Romania says it has foiled a Russian sabotage plot"
+      },
+      "summary": {
+        "ru": "Румынская разведка сообщила о задержании живущего в стране 40-летнего россиянина Ивана Куценко, который якобы фотографировал военные базы НАТО, узлы связи и украинские грузовые самолёты по заданию кураторов из России. Прокуратура просит арестовать его на 30 суток; ведомство сравнивает схему с диверсионными сетями, действовавшими в других странах Европы.",
+        "en": "Romanian intelligence reported the detention of Ivan Kutsenko, a 40-year-old Russian living in the country. He allegedly photographed NATO bases, communications hubs and Ukrainian cargo aircraft on instructions from handlers in Russia. Prosecutors are seeking to hold him for 30 days. The agency compared the operation to sabotage networks that had operated elsewhere in Europe."
+      },
+      "references": [
+        {
+          "handle": "astrapress",
+          "message_id": 124632,
+          "url": "https://t.me/astrapress/124632",
+          "name": {
+            "ru": "ASTRA",
+            "en": "ASTRA"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "agentstvonews",
+          "message_id": 17174,
+          "url": "https://t.me/agentstvonews/17174",
+          "name": {
+            "ru": "Агентство. Новости",
+            "en": "Agentstvo"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "tvrain",
+          "message_id": 110522,
+          "url": "https://t.me/tvrain/110522",
+          "name": {
+            "ru": "Дождь | Новости",
+            "en": "TV Rain"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "dwglavnoe",
+          "message_id": 68449,
+          "url": "https://t.me/dwglavnoe/68449",
+          "name": {
+            "ru": "DW Главное",
+            "en": "DW Russian"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "moscowtimes_ru",
+          "message_id": 49453,
+          "url": "https://t.me/moscowtimes_ru/49453",
+          "name": {
+            "ru": "The Moscow Times",
+            "en": "The Moscow Times"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "novaya_europe",
+          "message_id": 66783,
+          "url": "https://t.me/novaya_europe/66783",
+          "name": {
+            "ru": "Новая газета Европа",
+            "en": "Novaya Gazeta Europe"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "main_06",
+      "section": "main",
+      "position": 6,
+      "title": {
+        "ru": "Давление на «Яблоко» и КПРФ перед выборами в Госдуму расширяется",
+        "en": "Pressure on Yabloko and Communist candidates spreads ahead of parliamentary elections"
+      },
+      "summary": {
+        "ru": "Список поводов для снятия кандидатов пополнился новыми регионами: в Псковской области сняли двух коммунистов из-за «иностранных финансовых инструментов», продолжаются истории со снятием яблочников из-за граффити Бэнкси, фото музыканта Motörhead и QR-кодов. В Петербурге зафиксированы попытки взлома аккаунтов кандидатов партии.",
+        "en": "More regions are disqualifying candidates ahead of Russia’s parliamentary elections. In the Pskov region, two Communist candidates were removed over “foreign financial instruments.” Yabloko candidates continue to face disqualification over Banksy graffiti, a photo of a Motörhead musician and QR codes. Attempts to hack party candidates’ accounts have also been recorded in St Petersburg."
+      },
+      "references": [
+        {
+          "handle": "novaya_europe",
+          "message_id": 66789,
+          "url": "https://t.me/novaya_europe/66789",
+          "name": {
+            "ru": "Новая газета Европа",
+            "en": "Novaya Gazeta Europe"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "meduzalive",
+          "message_id": 147651,
+          "url": "https://t.me/meduzalive/147651",
+          "name": {
+            "ru": "Медуза — LIVE",
+            "en": "Meduza"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "horizontal_russia",
+          "message_id": 57596,
+          "url": "https://t.me/horizontal_russia/57596",
+          "name": {
+            "ru": "7х7. Горизонтальная Россия",
+            "en": "7x7 — Horizontal Russia"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "mediazzzona",
+          "message_id": 33363,
+          "url": "https://t.me/mediazzzona/33363",
+          "name": {
+            "ru": "Медиазона",
+            "en": "Mediazona"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "smirusnews",
+          "message_id": 91010,
+          "url": "https://t.me/smirusnews/91010",
+          "name": {
+            "ru": "RusNews ⭕️",
+            "en": "RusNews"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "main_07",
+      "section": "main",
+      "position": 7,
+      "title": {
+        "ru": "В Германии задержан подозреваемый в диверсиях на электросетях",
+        "en": "Germany arrests suspect in attacks on power infrastructure"
+      },
+      "summary": {
+        "ru": "Полицию вывели на 48-летнего Даниэля В. после того, как он сам прислал в редакции немецких СМИ письма с признанием в атаках на подстанции и мотивировал их борьбой с «ископаемым топливом» и поддержкой Германией «геноцида в Палестине». При задержании у него нашли взрывчатку и палатку с дополнительными зарядами.",
+        "en": "Police were led to a 48-year-old identified as Daniel W. after he sent letters to German newsrooms admitting to targeting substations. In the letters, he said he was acting against “fossil fuels” and Germany’s support for “genocide in Palestine.” When he was arrested, police found explosives and a tent containing additional charges."
+      },
+      "references": [
+        {
+          "handle": "moscowtimes_ru",
+          "message_id": 49456,
+          "url": "https://t.me/moscowtimes_ru/49456",
+          "name": {
+            "ru": "The Moscow Times",
+            "en": "The Moscow Times"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "dwglavnoe",
+          "message_id": 68446,
+          "url": "https://t.me/dwglavnoe/68446",
+          "name": {
+            "ru": "DW Главное",
+            "en": "DW Russian"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "astrapress",
+          "message_id": 124625,
+          "url": "https://t.me/astrapress/124625",
+          "name": {
+            "ru": "ASTRA",
+            "en": "ASTRA"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "meduzalive",
+          "message_id": 147645,
+          "url": "https://t.me/meduzalive/147645",
+          "name": {
+            "ru": "Медуза — LIVE",
+            "en": "Meduza"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "tvrain",
+          "message_id": 110513,
+          "url": "https://t.me/tvrain/110513",
+          "name": {
+            "ru": "Дождь | Новости",
+            "en": "TV Rain"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "main_08",
+      "section": "main",
+      "position": 8,
+      "title": {
+        "ru": "Экипаж арестованного в Норвегии судна «Профессор Молчанов» вернулся в Россию",
+        "en": "Crew of ship detained in Norway returns to Russia"
+      },
+      "summary": {
+        "ru": "69 россиян с судна, задержанного в начале сентября по иску украинского «Нафтогаза» о взыскании $4,22 млрд за утраченные крымские активы, вернулись на родину через норвежский Киркенес. Само судно остаётся под арестом, Москва намерена добиваться его освобождения.",
+        "en": "Sixty-nine Russians from the Professor Molchanov have returned home via the Norwegian town of Kirkenes. The ship was detained in early September following a claim by Ukraine’s Naftogaz seeking $4.22 billion over assets lost in Crimea. The vessel remains under detention, and Moscow says it will seek its release."
+      },
+      "references": [
+        {
+          "handle": "kommersant",
+          "message_id": 114797,
+          "url": "https://t.me/kommersant/114797",
+          "name": {
+            "ru": "Коммерсантъ",
+            "en": "Kommersant"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "astrapress",
+          "message_id": 124626,
+          "url": "https://t.me/astrapress/124626",
+          "name": {
+            "ru": "ASTRA",
+            "en": "ASTRA"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "tvrain",
+          "message_id": 110516,
+          "url": "https://t.me/tvrain/110516",
+          "name": {
+            "ru": "Дождь | Новости",
+            "en": "TV Rain"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "sotavisionmedia",
+          "message_id": 63977,
+          "url": "https://t.me/sotavisionmedia/63977",
+          "name": {
+            "ru": "SOTAvision",
+            "en": "SOTAvision"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "interfaxonline",
+          "message_id": 78416,
+          "url": "https://t.me/interfaxonline/78416",
+          "name": {
+            "ru": "Интерфакс",
+            "en": "Interfax"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "main_09",
+      "section": "main",
+      "position": 9,
+      "title": {
+        "ru": "Европа готовит поставки ракет Patriot для Украины на зиму",
+        "en": "European countries prepare Patriot missile supplies for Ukraine this winter"
+      },
+      "summary": {
+        "ru": "Великобритания выделяет $135 млн на закупку у США ракет для Patriot, Германия передаст Украине перехватчики PAC-2 из запасов Бундесвера. Решение принято на фоне ожиданий более массированных ударов по украинской энергетике этой зимой и провала переговоров Уиткоффа и Кушнера с Путиным.",
+        "en": "The UK is providing $135 million to buy Patriot missiles from the US, while Germany will send Ukraine PAC-2 interceptors from its military stocks. The move comes amid expectations of heavier attacks on Ukraine’s energy infrastructure this winter and follows the failure of Witkoff and Kushner’s talks with Putin."
+      },
+      "references": [
+        {
+          "handle": "meduzalive",
+          "message_id": 147652,
+          "url": "https://t.me/meduzalive/147652",
+          "name": {
+            "ru": "Медуза — LIVE",
+            "en": "Meduza"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "moscowtimes_ru",
+          "message_id": 49459,
+          "url": "https://t.me/moscowtimes_ru/49459",
+          "name": {
+            "ru": "The Moscow Times",
+            "en": "The Moscow Times"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "kontext_channel",
+          "message_id": 77706,
+          "url": "https://t.me/kontext_channel/77706",
+          "name": {
+            "ru": "КОНТЕКСТ",
+            "en": "Kontekst"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "main_10",
+      "section": "main",
+      "position": 10,
+      "title": {
+        "ru": "Массовое изъятие скота в регионах России продолжается",
+        "en": "Mass livestock seizures continue across Russian regions"
+      },
+      "summary": {
+        "ru": "В Иркутской области у фермеров без документов и анализов забирают и убивают коров и свиней под предлогом вспышки заразного узелкового дерматита, скотомогильник строят прямо в русле реки. В Тюменской области под предлогом африканской чумы свиней продолжается изъятие поросят, у которых, по словам местных коммунистов, не находят признаков болезни.",
+        "en": "In the Irkutsk region, farmers’ cattle and pigs are being seized and killed without paperwork or testing, ostensibly because of an outbreak of lumpy skin disease. An animal burial site is being built directly in a riverbed. In the Tyumen region, piglets continue to be seized over alleged African swine fever, although local Communist Party members say no signs of the disease have been found in them."
+      },
+      "references": [
+        {
+          "handle": "vottaktv",
+          "message_id": 81167,
+          "url": "https://t.me/vottaktv/81167",
+          "name": {
+            "ru": "Вот Так",
+            "en": "Vot Tak"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "meduzalive",
+          "message_id": 147648,
+          "url": "https://t.me/meduzalive/147648",
+          "name": {
+            "ru": "Медуза — LIVE",
+            "en": "Meduza"
+          },
+          "support_check": "not_performed"
+        },
+        {
+          "handle": "horizontal_russia",
+          "message_id": 57594,
+          "url": "https://t.me/horizontal_russia/57594",
+          "name": {
+            "ru": "7х7. Горизонтальная Россия",
+            "en": "7x7 — Horizontal Russia"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "extra_01",
+      "section": "extra",
+      "position": 1,
+      "title": {
+        "ru": "Симоньян заявила об излечении от рака",
+        "en": "Simonyan says she has been given the all-clear after cancer treatment"
+      },
+      "summary": {
+        "ru": "Главред RT Маргарита Симоньян сообщила, что после диагностики результаты «все чисто» — спустя три часа после видео, в котором она говорила, что узнает, «будет она жить или не будет». О лечении рака груди она объявила в сентябре 2025 года, проходила химиотерапию и рассказывала о выпавших волосах.",
+        "en": "RT editor-in-chief Margarita Simonyan said her latest tests had come back “all clear.” Three hours earlier, she had posted a video saying she was about to find out “whether I’ll live or not.” She announced in September 2025 that she was being treated for breast cancer, later describing her chemotherapy and hair loss."
+      },
+      "references": [
+        {
+          "handle": "tvrain",
+          "message_id": 110524,
+          "url": "https://t.me/tvrain/110524",
+          "name": {
+            "ru": "Дождь | Новости",
+            "en": "TV Rain"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "extra_02",
+      "section": "extra",
+      "position": 2,
+      "title": {
+        "ru": "Хакеры выложили план ядерной защиты Берлина",
+        "en": "Hackers publish Berlin’s nuclear emergency plans"
+      },
+      "summary": {
+        "ru": "Русскоязычная группировка Rhysida опубликовала около 1,4 млн похищенных у властей Берлина файлов объёмом более 5 терабайт после отказа города заплатить выкуп в 30 биткоинов. Среди документов — планы защиты от химических, биологических и ядерных угроз, данные о водоснабжении, полиции и оборонных предприятиях.",
+        "en": "The Russian-speaking Rhysida group released around 1.4 million files stolen from Berlin’s authorities, totalling more than five terabytes, after the city refused to pay a ransom of 30 bitcoin. The documents include plans for chemical, biological and nuclear threats, along with information about water supplies, police and defence companies."
+      },
+      "references": [
+        {
+          "handle": "moscowtimes_ru",
+          "message_id": 49452,
+          "url": "https://t.me/moscowtimes_ru/49452",
+          "name": {
+            "ru": "The Moscow Times",
+            "en": "The Moscow Times"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "extra_03",
+      "section": "extra",
+      "position": 3,
+      "title": {
+        "ru": "Стартап Воложа стал партнёром разработчика военного ИИ Пентагона",
+        "en": "Volozh’s Nebius partners with Pentagon AI supplier Palantir"
+      },
+      "summary": {
+        "ru": "Компания Nebius Group Аркадия Воложа заключила стратегическое партнёрство с Palantir Technologies, среди заказчиков которой ЦРУ, ФБР и ICE — вычислительная инфраструктура Nebius будет доступна внутри системы Palantir Sovereign AI Operating System.",
+        "en": "Arkady Volozh’s Nebius Group has struck a strategic partnership with Palantir Technologies, whose customers include the CIA, FBI and ICE. Nebius’s computing infrastructure will be available through Palantir’s Sovereign AI Operating System."
+      },
+      "references": [
+        {
+          "handle": "moscowtimes_ru",
+          "message_id": 49460,
+          "url": "https://t.me/moscowtimes_ru/49460",
+          "name": {
+            "ru": "The Moscow Times",
+            "en": "The Moscow Times"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "extra_04",
+      "section": "extra",
+      "position": 4,
+      "title": {
+        "ru": "Кремлёвские боты атакуют программу «5000 дронов для Украины» фейковыми видео",
+        "en": "Kremlin bots target “5,000 drones for Ukraine” programme with fake videos"
+      },
+      "summary": {
+        "ru": "Сеть «Матрёшка» распространяет ролики, оформленные под Handelsblatt, Bloomberg и Politico, в которых канцлеру Мерцу приписывают хищение €700 млн из помощи Украине, премьеру Швеции — сговор с ним, а немецко-украинскому проекту дронов — угрозу для жителей и планы «оставить дроны себе».",
+        "en": "The Matryoshka network is circulating videos made to look like reports from Handelsblatt, Bloomberg and Politico. They falsely accuse Chancellor Merz of stealing €700 million in aid to Ukraine and Sweden’s prime minister of colluding with him. They also portray a German-Ukrainian drone project as a threat to local residents and claim those involved plan to “keep the drones for themselves.”"
+      },
+      "references": [
+        {
+          "handle": "theinsider",
+          "message_id": 52049,
+          "url": "https://t.me/theinsider/52049",
+          "name": {
+            "ru": "The Insider",
+            "en": "The Insider"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    },
+    {
+      "id": "extra_05",
+      "section": "extra",
+      "position": 5,
+      "title": {
+        "ru": "В Москве сносят исторический комплекс Электрозавода",
+        "en": "Moscow’s historic Elektrozavod complex is being demolished"
+      },
+      "summary": {
+        "ru": "Рабочие уже разобрали часть корпусов неоготического комплекса 1915 года постройки, пострадавшего от пожара в 2025 году; активисты «Архнадзора» проиграли суд, оспаривая московский закон, лишивший статуса памятника 1332 объекта, включая Электрозавод.",
+        "en": "Workers have already dismantled part of the neo-Gothic complex, built in 1915 and damaged by a fire in 2025. Preservation campaigners from Arkhnadzor lost a court challenge to a Moscow law that stripped 1,332 sites, including Elektrozavod, of protected status."
+      },
+      "references": [
+        {
+          "handle": "sotavisionmedia",
+          "message_id": 63979,
+          "url": "https://t.me/sotavisionmedia/63979",
+          "name": {
+            "ru": "SOTAvision",
+            "en": "SOTAvision"
+          },
+          "support_check": "not_performed"
+        }
+      ]
+    }
+  ],
+  "ru_content_sha256": "945e7d78238e3581677d6a3f9a61513fb8ab27b497bac50bc63d5e8a986c9f32"
+}

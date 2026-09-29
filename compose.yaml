@@ -1,0 +1,82 @@
+# Integration environment. Not a production deployment: add HTTPS, backup storage and MFA first.
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-digest}
+      POSTGRES_USER: ${POSTGRES_USER:-digest}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      retries: 10
+  broker:
+    image: rabbitmq:4-management
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-digest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:?Set RABBITMQ_PASSWORD}
+    volumes: [rabbitmq_data:/var/lib/rabbitmq]
+    healthcheck:
+      test: [CMD, rabbitmq-diagnostics, -q, ping]
+      interval: 10s
+      retries: 10
+  web:
+    build: .
+    environment: &app_environment
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?Set DJANGO_SECRET_KEY}
+      # Local HTTP integration only, never bind this debug service publicly.
+      DJANGO_DEBUG: "1"
+      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1
+      POSTGRES_HOST: db
+      POSTGRES_DB: ${POSTGRES_DB:-digest}
+      POSTGRES_USER: ${POSTGRES_USER:-digest}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      OPENROUTER_BASE_URL: ${OPENROUTER_BASE_URL:-https://openrouter.ai/api/v1}
+      OPENROUTER_APP_TITLE: ${OPENROUTER_APP_TITLE:-Owned AI Digest}
+      AI_MONTHLY_BUDGET_USD: ${AI_MONTHLY_BUDGET_USD:-0.00}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_WEBHOOK_SECRET: ${TELEGRAM_WEBHOOK_SECRET:-}
+      TELEGRAM_SOURCE_API_ID: ${TELEGRAM_SOURCE_API_ID:-}
+      TELEGRAM_SOURCE_API_HASH: ${TELEGRAM_SOURCE_API_HASH:-}
+      TELEGRAM_SOURCE_PHONE: ${TELEGRAM_SOURCE_PHONE:-}
+      TELEGRAM_SOURCE_SESSION_PATH: /run/secrets/telethon/source
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      db: {condition: service_healthy}
+    volumes: [static_files:/app/staticfiles, telethon_session:/run/secrets/telethon]
+  worker:
+    profiles: [workers]
+    build: .
+    environment:
+      <<: *app_environment
+      CELERY_BROKER_URL: amqp://${RABBITMQ_USER:-digest}:${RABBITMQ_PASSWORD:?Set RABBITMQ_PASSWORD}@broker:5672//
+    command: [celery, -A, digest_service.celery_app, worker, -Q, maintenance, --loglevel=INFO, --concurrency=1]
+    depends_on:
+      db: {condition: service_healthy}
+      broker: {condition: service_healthy}
+    volumes: [telethon_session:/run/secrets/telethon]
+  scheduler:
+    profiles: [workers]
+    build: .
+    environment:
+      <<: *app_environment
+      CELERY_BROKER_URL: amqp://${RABBITMQ_USER:-digest}:${RABBITMQ_PASSWORD:?Set RABBITMQ_PASSWORD}@broker:5672//
+    command: [python, manage.py, run_background_scheduler, --poll-seconds, "15"]
+    depends_on:
+      db: {condition: service_healthy}
+      broker: {condition: service_healthy}
+  sender:
+    profiles: [telegram]
+    build: .
+    environment:
+      <<: *app_environment
+    command: [python, manage.py, run_telegram_sender, --poll-seconds, "2", --batch-size, "25"]
+    depends_on:
+      db: {condition: service_healthy}
+volumes:
+  postgres_data:
+  rabbitmq_data:
+  static_files:
+  telethon_session:

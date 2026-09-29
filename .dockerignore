@@ -1,0 +1,11 @@
+.git
+.venv
+var
+tmp
+research
+docs
+dist
+.github
+__pycache__
+.env
+.env.*
