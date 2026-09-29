@@ -5,7 +5,8 @@ Code). Секреты в файл не пишутся: он ссылается �
 
 ## Состав
 
-- `Postgres` — PostgreSQL 17, как в compose и CI; `pg_dump` в образе приложения тоже 17.
+- `Postgres` — PostgreSQL 18, версия Railway по умолчанию; `pg_dump` 18 в образе приложения работает и
+  с PostgreSQL 17 из compose.
 - `rabbitmq` — RabbitMQ 4 с томом `rabbitmq-data`.
 - `digest` — Gunicorn и админка, публичный HTTPS-домен, healthcheck `/health/`. Перед каждым деплоем
   выполняется `deploy/init.sh`: миграции, начальный каталог, роли, `check --deploy`.

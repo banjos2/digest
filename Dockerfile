@@ -1,8 +1,11 @@
 FROM python:3.13-slim
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONPATH=/app/src
 WORKDIR /app
+# pg_dump 18 from PGDG: it dumps both PostgreSQL 17 (compose) and 18 (Railway's default).
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends age postgresql-client \
+    && apt-get install -y --no-install-recommends age postgresql-common \
+    && /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y \
+    && apt-get install -y --no-install-recommends postgresql-client-18 \
     && rm -rf /var/lib/apt/lists/*
 COPY requirements.lock ./
 RUN pip install --no-cache-dir -r requirements.lock

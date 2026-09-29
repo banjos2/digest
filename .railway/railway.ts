@@ -1,14 +1,10 @@
 // Railway project for the digest service. Runbook: docs/RAILWAY_DEPLOYMENT.md.
 // Secrets are Railway shared variables (ctx.shared.*); they are never written here.
-import { database, defineRailway, github, image, project, service, volume } from "railway/iac";
+import { defineRailway, github, image, postgres, project, service, volume } from "railway/iac";
 
 export default defineRailway((ctx) => {
-  // Postgres 17 matches compose, CI and the pg_dump in the app image (Debian postgresql-client 17).
-  const db = database("Postgres", "postgres", {
-    image: "ghcr.io/railwayapp-templates/postgres-ssl:17",
-    output: "DATABASE_URL",
-    defaultMountPath: "/var/lib/postgresql/data",
-  });
+  // Railway provisions PostgreSQL 18 regardless of the image tag; the app image ships pg_dump 18.
+  const db = postgres("Postgres");
 
   const brokerData = volume("rabbitmq-data", { region: "iad", sizeMB: 500 });
   const broker = service("rabbitmq", {
